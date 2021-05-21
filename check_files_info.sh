@@ -20,7 +20,7 @@ do
 			mess="File's data has been changed (${CONTROL_DIR}${file_name})" 
 			log+="${mess}\n"
 			#echo "$mess" | boxes
-			echo "$mess" >> integrity.log
+			printf "$log" > integrity.log
 		fi
 	else
 		log+="It's a new file (${file_name}), if u wanna update hashes of directory (${CONTROL_DIR}) u need execute '~/create_files_info.sh'\n"
