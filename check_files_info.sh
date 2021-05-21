@@ -17,7 +17,7 @@ do
 		#echo "${saved_sha} - ${HASH_ARR[$file_name]}"
 		if ! [ $saved_sha = ${HASH_ARR[$file_name]} ]
 		then
-			mess="File's data has been changed (${CONTROL_DIR}${file_name})" 
+			mess="File's data has been changed (${CONTROL_DIR}${file_name}) from $(ls $CONTROL_DIR -l | grep "$file_name$" | awk '{print $6" "$7" "$8}')"
 			log+="${mess}\n"
 			#echo "$mess" | boxes
 			printf "$log" > integrity.log
