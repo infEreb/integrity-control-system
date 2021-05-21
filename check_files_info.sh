@@ -26,4 +26,11 @@ do
 		log+="It's a new file (${file_name}), if u wanna update hashes of directory (${CONTROL_DIR}) u need execute '~/create_files_info.sh'\n"
 	fi
 done
+
+# if no changes
+if [ "$log" = "" ] 
+then
+	log+="File's data has no changes\n"
+fi
+
 printf "$log" | boxes

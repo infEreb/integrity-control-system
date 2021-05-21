@@ -8,6 +8,11 @@ include /usr/local/etc/integrity.conf
 
 # directory that would be hashing
 #$CONTROL_DIR
+# directory for saving .sha1 files
+#$SHA_DIR
+# directory for saving .data files
+#$DATA_DIR
+
 
 # array for hashes
 declare -A HASH_ARR
@@ -60,7 +65,8 @@ function Hashing() {
 				if [ -f "$SHA_DIR$CONTROL_DIR${file_name}.sha1" ]
 				then
 					# print ...
-					echo "${file_name}.sha1 exists"
+					echo "${file_name}.sha1 already exists and has been updated"
+					echo "$sha" > "$SHA_DIR$CONTROL_DIR${file_name}.sha1"
 					#hashes[$file_name]=$sha
 				else
 					# create one
