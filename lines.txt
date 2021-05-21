@@ -1,0 +1,6 @@
+total 48
+-rw-r--r-- 1 ie ie    7 May 21 06:04 lulz.txt
+-rwxr-xr-x 1 ie ie 8880 Apr 10 00:12 sh
+-rwxr-xr-x 1 ie ie 8880 Apr 10 00:24 sh.o
+-rw-r--r-- 1 ie ie  132 Apr 24 06:20 sh.s
+-rw-r--r-- 1 ie ie  139 May 21 06:04 sh_cp.s
